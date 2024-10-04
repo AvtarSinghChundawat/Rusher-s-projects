@@ -5,48 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rusher's Gym</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Raleway:wght@300&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Raleway:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <!-- Left box for logo -->
         <div class="left">
-            <img src="img/gym-2.png" alt="Gym Logo">
+            <img src="img/gym-2.png" alt="">
             <div>Avtar Fitness</div>
         </div>
-
-        <!-- Mid box for navbar -->
         <div class="center">
-            <ul class="navbar" id="nav-links">
+            <ul class="navbar">
                 <li><a href="#" target="_blank">Home</a></li>
                 <li><a href="#" target="_blank">About Us</a></li>
                 <li><a href="#" target="_blank">Fitness Calculator</a></li>
                 <li><a href="#" target="_blank">Contact Us</a></li>
             </ul>
-            <!-- Hamburger Icon for mobile screens -->
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
-
-        <!-- Right box for buttons and search -->
         <div class="right">
             <ul>
                 <li><button class="btn">Call Us Now</button></li>
                 <li><button class="btn" id="e-mail">E-mail Us</button></li>
             </ul>
-
-            <!-- Search bar -->
-            <div class="search-container">
-                <input type="text" id="search-bar" placeholder="Search on Google">
-                <button onclick="googleSearch()" class="btn">Search</button>
-            </div>
         </div>
     </header>
-
     <div class="container">
         <h1>Join the best gym of Mumbai now !!!</h1>
         <form action="noaction.php">
@@ -69,27 +50,9 @@
                 <input type="number" class="MobileNo." placeholder="Enter Your Phone No.">
             </div>
             <div class="form-group">
-                <button class="submit">SUBMIT</button>
+                <button type="submit" class="submit">SUBMIT</button>
             </div>
         </form>
     </div>
-
-    <script>
-        // Function to handle Google search
-        function googleSearch() {
-            var query = document.getElementById("search-bar").value;
-            if (query) {
-                window.open("https://www.google.com/search?q=" + encodeURIComponent(query), 
-                "_blank", 
-                "width=600,height=400");
-            }
-        }
-
-        // Hamburger menu toggle
-        document.getElementById("hamburger").addEventListener("click", function() {
-            var navLinks = document.getElementById("nav-links");
-            navLinks.classList.toggle("show-nav");
-        });
-    </script>
 </body>
 </html>
