@@ -10,53 +10,86 @@
 </head>
 <body>
     <header class="header">
-        <!-- Left box for logo  -->
+        <!-- Left box for logo -->
         <div class="left">
-            <img src="img/gym-2.png" alt="">
+            <img src="img/gym-2.png" alt="Gym Logo">
             <div>Avtar Fitness</div>
         </div>
+
         <!-- Mid box for navbar -->
         <div class="center">
-            <ul class="navbar">
+            <ul class="navbar" id="nav-links">
                 <li><a href="#" target="_blank">Home</a></li>
                 <li><a href="#" target="_blank">About Us</a></li>
                 <li><a href="#" target="_blank">Fitness Calculator</a></li>
                 <li><a href="#" target="_blank">Contact Us</a></li>
-               </ul>
+            </ul>
+            <!-- Hamburger Icon for mobile screens -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <!-- Right box for buttons -->
-        <div class="right"><ul>
-            <li><button class="btn">Call Us Now</button>
-            </li>
-            <li> <button class="btn" id="e-mail">E-mail Us</button>
-            </li>
-        </ul>        
+
+        <!-- Right box for buttons and search -->
+        <div class="right">
+            <ul>
+                <li><button class="btn">Call Us Now</button></li>
+                <li><button class="btn" id="e-mail">E-mail Us</button></li>
+            </ul>
+
+            <!-- Search bar -->
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search on Google">
+                <button onclick="googleSearch()" class="btn">Search</button>
+            </div>
         </div>
-        <div class="container">
-            <h1>Join the best gym of Mumbai now !!!</h1>
-            <form action="noaction.php">
-                <div class="form-group">
-                    <input type="text" class="name" placeholder="Enter Your Name">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="email" placeholder="Enter Your Email">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="age" placeholder="Enter Your Age">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="weight" placeholder="Enter Your Weight">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="plan" placeholder="Choose Your Plan">
-                </div>
-                <div class="form-group">
-                    <input type="number" class="MobileNo." placeholder="Enter Your Phone No.">
-                </div>
-                <div class="form-group">
-                    <button class="submit">SUBMIT</button>
-                </div>
-            </form>
-        </div>
+    </header>
+
+    <div class="container">
+        <h1>Join the best gym of Mumbai now !!!</h1>
+        <form action="noaction.php">
+            <div class="form-group">
+                <input type="text" class="name" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+                <input type="text" class="email" placeholder="Enter Your Email">
+            </div>
+            <div class="form-group">
+                <input type="text" class="age" placeholder="Enter Your Age">
+            </div>
+            <div class="form-group">
+                <input type="text" class="weight" placeholder="Enter Your Weight">
+            </div>
+            <div class="form-group">
+                <input type="text" class="plan" placeholder="Choose Your Plan">
+            </div>
+            <div class="form-group">
+                <input type="number" class="MobileNo." placeholder="Enter Your Phone No.">
+            </div>
+            <div class="form-group">
+                <button class="submit">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Function to handle Google search
+        function googleSearch() {
+            var query = document.getElementById("search-bar").value;
+            if (query) {
+                window.open("https://www.google.com/search?q=" + encodeURIComponent(query), 
+                "_blank", 
+                "width=600,height=400");
+            }
+        }
+
+        // Hamburger menu toggle
+        document.getElementById("hamburger").addEventListener("click", function() {
+            var navLinks = document.getElementById("nav-links");
+            navLinks.classList.toggle("show-nav");
+        });
+    </script>
 </body>
 </html>

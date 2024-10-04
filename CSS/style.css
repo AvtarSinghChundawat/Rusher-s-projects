@@ -3,161 +3,210 @@
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
+
 /* CSS Reset */
-body{
-    margin:0px;
-    padding:0px;
-    background-image:url(img/gym-3.jpg);
-    background-size: 2160px;
-    background-repeat:no-repeat;
-    color:rgb(255, 255, 255);
-    background-color: black;
-    height:650px;
-    background-position: center;
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(img/gym-3.jpg); /* Set the background image here */
+    background-size: cover; /* Ensure the image covers the entire body */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image */
+    color: #fff;
+    min-height: 100vh; /* Ensure the body covers the full height */
 }
-.left{
-    /* border:2px solid red; */
-    display:inline-block;
-    position:absolute;
-    top:13px;
-    left:10px;
-    text-align: center;
-    box-sizing: border-box;
-    width:150px;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
 }
-.left img{
-    width:150px;
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left img {
+    width: 80px;
     filter: invert(100%);
-    border-radius:30px;
-    box-sizing: border-box;
+    border-radius: 30px;
 }
-.left div{
-    display:block;
-    padding:10px;
+
+.left div {
+    padding-left: 10px;
     font-size: 25px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:rgb(0, 213, 255);
-    font-style:bold;
-    box-sizing: border-box;
+    color: rgb(0, 213, 255);
 }
-.center{
-    /* border:2px solid rgb(0, 255, 234); */
-    margin:65px auto;
-    width:800px;
+
+.center {
+    display: flex;
+    align-items: center;
 }
-.right{
-    /* border:2px solid rgb(0, 174, 255); */
-    position:absolute;
-    display:inline-block;
-    top:-3px;
-    right:14.7px;
+
+.navbar {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
 }
-.navbar{
-    display:block;
-    /* border:2px solid red; */
-    width:788px;
-    /* text-align: center; */
-    margin-left:-17px;
-    margin-top:-39px
+
+.navbar li {
+    margin: 0 15px;
 }
-.navbar li{
-    display:inline-block;
-    color:white;
-    font-size: 27px;
-    margin:auto;
-}
-.navbar li a{
-    color:rgb(0, 251, 255);
+
+.navbar li a {
+    color: rgb(0, 251, 255);
     background-color: rgba(128, 128, 128, 0.584);
     text-decoration: none;
-    border-radius:20px;
-    padding:14px 20px;   
-    margin:0px 3px;   
-}
-.navbar li a:hover{
-    color:black;
-    background-color:rgb(0, 255, 238);
-}
-.navbar li a:active{
-    background-color: orangered;
-    color:white;
-}
-.btn{
+    padding: 10px 15px;
     border-radius: 10px;
+}
+
+.navbar li a:hover {
+    background-color: rgb(0, 255, 238);
+    color: black;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.right ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+.right ul li {
+    margin: 0 10px;
+}
+
+.btn {
+    border: 2px solid rgb(0, 255, 238);
     background-color: rgba(128, 128, 128, 0.562);
-    color:rgb(0, 255, 238);
-    border:2px solid rgb(0, 255, 238);
-    display:inline-block;
-    text-align: center;
-    height:50px;
-    width:100px;
-    cursor:pointer;
+    color: rgb(0, 255, 238);
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: rgb(0, 247, 255);
-    color:black;
-    border:2px solid black;
+    color: black;
 }
-.btn:active{
-    background-color: orangered;
-    color:white;
+
+.search-container {
+    margin-left: 20px;
 }
-.right ul li{
-    margin:0px 0px 10px 0px;
-    list-style: none;
-    padding-left:20px;
+
+#search-bar {
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
 }
-.container{
-    display:block;
-    /* border:2px solid red; */
-    margin:100px auto;
-    text-align: center;
-    width:600px;
-    padding:0px 30px 32px 30px;
-    color:rgb(0, 255, 238);
-}
-.container form input{
-    display:block;
-    padding:10px;
-    /* margin:2px; */
-    margin:4px auto;
-    border-radius:10px;
-    background-color:rgba(0, 0, 0, 0.903);
-    border:2px;
-    width:250px;
-    text-align: center;     
-    color:white;   
-    font-size:16px; 
-    font-style:bold;
-}
-.container form input:hover{
+
+#search-bar:hover {
     background-color: rgba(127, 255, 212, 0.584);
     cursor: pointer;
 }
-.container h1{
-    background-color: rgba(81, 81, 81, 0.483);
-    border-radius:10px;
-    padding:10px;
-    font-size:35px;
-    margin:30px auto;
-}
-.submit{
-    border-radius:7px;
+
+.container {
     text-align: center;
-    margin:10px;
-    width:80px;
-    height:33px;
-    background-color:transparent;
-    border:2px;
-    color:rgb(0, 255, 225);
-    font-size:16px;
+    margin-top: 80px;
+    color: rgb(0, 255, 238);
+}
+
+.container form input {
+    display: block;
+    padding: 10px;
+    margin: 4px auto;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.903);
+    border: 2px;
+    width: 250px;
+    color: white;
+    font-size: 16px;
+}
+
+.submit {
     background-color: black;
+    color: rgb(0, 255, 225);
+    padding: 10px 20px;
+    border-radius: 7px;
 }
-.submit:hover{
+
+.submit:hover {
     background-color: aqua;
-    color:black;
+    color: black;
 }
-.submit:active{
-    background-color: orangered;
-    color:white;
+
+/* RESPONSIVE STYLING */
+
+@media screen and (max-width: 768px) {
+    .center {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar.show-nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .right {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .left img {
+        width: 60px;
+    }
+
+    .left div {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    #search-bar {
+        width: 150px;
+    }
 }
